@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>导航栏</title>
+		<link rel="stylesheet" href="css/table_css.css" />
+		<style type="text/css">
+
+		</style>
+	
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+	</head>
+
+	<body>
+		<div id="tab">
+			<ul class="tab-nav">
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">文档</a>
+				</li>
+				<li class="active">
+					<a href="#">综合Table</a>
+				</li>
+			</ul>
+			<div class="content-wrap">
+				<div class="content-iten">
+					<hr /> 内容一
+				</div>
+				<div class="content-iten">
+					<hr /> 内容二
+				</div>
+				<div class="content-iten current">
+					<hr />
+					<form class="me">
+						<input type="text" id="imp" placeholder="标题" />
+						<input type="text" list="url_list"  placeholder="重要性"/>
+						<input type="text" list="url_list1"  placeholder="类型"/>
+						<input type="text" list="url_list2"  placeholder="ID Ascending"/>
+						<input type="button" id="btnReverse"   value="搜索" />
+					<input type="button"  id="btnAdd"  class="btn1" value="添加"/>
+					<input type="button" id="btnDelete" value="导出" /> 
+					<input type="checkbox" id="checkhuman"  style="width: 15px;height: 15px;"/> <span style="font-size: 15px;">审核人</span>
+					</form>
+					<datalist id="url_list">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+                   </datalist>
+                   <datalist id="url_list1">
+	                   	<option>China(CN)</option>
+	                   	<option>USA(US)</option>
+	                   	<option>Japan(JP)</option>
+	                   	<option>Eurozone(EU)</option>	
+                   </datalist>
+                   <datalist id="url_list2">
+						<option>ID Ascending</option>
+						<option>ID Descending</option>
+                   </datalist>
+                   <table border="1">
+				        <thead> 
+				        <th width="100">序号</th>
+				        <th width="170">时间</th>
+				        <th width="330">标题</th>
+				        <th width="100">作者</th>
+				        <th width="100">重要性</th>
+				        <th width="70">阅读数</th>
+				        <th width="70">状态</th>
+				        <th width="280">操作</th>
+				        </thead>
+				        <tbody id="list">  
+				        	
+				        </tbody>
+				    </table>
+					  <!--<div class="big_div">
+							<div class="center_div" id="shouye" onclick="count('thefirstpage')">首页</div>
+							<div class="center_div" id="shangyiye" onclick="count('frontpage')">上一页</div>
+							<div class="little_div"></div>
+							<div class="center_div" id="xiayiye" onclick="count('nextpage')">下一页</div>
+							<div class="center_div" id="moye" onclick="count('thelastpage')">末页</div>
+							<input type="text" id="tiaozhuan_number"/>
+							<div class="center_div" id="tiaozhuan" onclick="count('turn')">跳转</div>
+						</div>-->
+					
+				</div>
+				
+			
+                <div id="add">
+				    	 <form class="me1">
+						<span>类型<input type="text"  list="list1" class="list"/></span><br />
+						 <span>时间<input type="text" class="list"/></span><br />
+						 <span>标题<input type="text" class="list"/></span><br />
+						 <span>状态<input type="text"  list="list2" class="list"/></span><br />
+						 <span>重要性</span><br />
+					     <span>点评<textarea></textarea> </span><br />	     
+					</form> 
+				 <button id="close">关闭</button> <button id="baocun">保存 </button><br />
+					<!--问题：有空设置默认值 -->
+					 <datalist id="list1">
+	                   	<option >China(CN)</option>
+	                   	<option>USA(US)</option>
+	                   	<option>Japan(JP)</option>
+	                   	<option>Eurozone(EU)</option>	
+                   </datalist>
+                   <datalist id="list2">
+						<option >published</option>
+						<option>draft</option>
+						<option>deleted</option>
+                   </datalist>
+	            </div>
+			</div>
+			
+		</div>
+		
+		<div id="menu">
+			<div class="has_children">
+				<span>首页</span>
+			</div>
+			<div class="has_children">
+				<span>文档</span>
+			</div>
+			<div class="has_children">
+				<span>引导页</span>
+			</div>
+			<div class="has_children">
+				<span>权限测试页</span>
+				<a>页面权限</a>
+				<a>指令权限</a>
+				<a>角色权限</a>
+			</div>
+			<div class="has_children">
+				<span>图标</span>
+			</div>
+			<div class="has_children">
+				<span>组件</span>
+				<a>副本编辑器</a>
+				<a>JSON编辑器</a>
+				<a>Splitpzone</a>
+				<a>头像上传</a>
+				<a>Dropzone</a>
+				<a>Sticky</a>
+				<a>Count To</a>
+				<a>小组件</a>
+				<a>返回底部</a>
+				<a>列表拖拽</a>
+				<a>可拖拽看板</a>
+			</div>
+			<div class="has_children">
+				<span>图表</span>
+				<a>键盘图表</a>
+				<a>折线图</a>
+				<a>混合图表</a>
+			</div>
+			<div class="has_children">
+				<span>路由嵌套</span>
+				<a>菜单一</a>
+				<a>菜单二</a>
+			</div>
+			<div class="has_children">
+				<span>Table</span>
+				<a>动态Table</a>
+				<a>拖拽Table</a>
+				<a>Table内编辑</a>
+				<a>综合table</a>
+			</div>
+			<div class="has_children">
+				<span>综合实例</span>
+				<a>创建文章</a>
+				<a>文章列表</a>
+			</div>
+			<div class="has_children">
+				<span>Tab</span>
+			</div>
+			<div class="has_children">
+				<span>错误页面</span>
+				<a>401</a>
+				<a>402</a>
+			</div>
+			<div class="has_children">
+				<span>错误日志</span>
+			</div>
+			<div class="has_children">
+				<span>Excel</span>
+				<a>导出Excel</a>
+				<a>导出已选择项</a>
+				<a>导出多级表头</a>
+				<a>上传Excel</a>
+			</div>
+			<div class="has_children">
+				<span>PDF</span>
+			</div>
+			<div class="has_children">
+				<span>换肤</span>
+			</div>
+			<div class="has_children">
+				<span>国际化</span>
+			</div>
+			<div class="has_children">
+				<span>外链</span>
+			</div>
+			<div class="has_children">
+				<span>打赏</span>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/table_js.js"></script>
+		<script type="text/javascript" src="js/bootstrap-3.3.7-dist/js/bootstrap.js" ></script>
+	</body>
+
+</html>

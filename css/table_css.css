@@ -1,0 +1,146 @@
+
+			ul ,li{
+				list-style-type: none;
+			}
+			#menu{
+				width: 100px;
+				float: left;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			.has_children{
+				background-color: #555;
+				color: #FFFFFF;
+				cursor: pointer;
+				padding-top: 15px;
+				text-align: center;
+			}
+			.highlight{
+				color: #FFFFFF;
+				background: green;
+			}
+			div{
+				padding: 0;
+			}
+			div a{
+				color: #888;
+				display: none;
+				float: left;
+				width: 100px;
+				padding-top: 15px;
+			}
+			#tab{
+				padding-left: 90px;
+				text-align: center;
+			}
+			#tab .tab-nav{
+				height: 30px;	
+			}
+			#tab .tab-nav li{
+				float: left;
+				margin-right: 5px;
+				background-color: #767676;
+				border-radius: 5px 5px 5px;
+			}
+			#tab .tab-nav li a{
+				display: block;
+				height: 30px;
+				padding: 0 20px;
+				color: #fff;
+				line-height: 30px;
+				text-decoration: none;
+			}
+			#tab .tab-nav li.active{
+				background-color: burlywood;
+			}
+			#tab .tab-nav li.active a{
+				color: #777;
+			}
+			.content-iten{
+				display: none;
+			}
+			.content-iten input{
+				width: 130px;
+				height: 27px;
+				
+			}
+			#btnReverse,#btnAdd,#btnDelete{
+				width: 75px;
+				height: 35px;
+				background-color: #888888;
+				border-radius: 5px 5px 5px;
+				
+			}
+    
+       #add{
+       	width: 300px;
+       	height: 280px;
+       	display: none;
+       	margin: auto;
+       	top: 100px;
+       	right: 450px;
+       	position:absolute;
+       	background-color: #00CCFF;
+       }
+	.me1{
+		margin-top: 35px;
+	}
+	#close{
+		margin-right: 15px;
+		margin-top: 10px;
+		height: 30px;
+		width: 60px;
+		line-height: 30px;
+		background-color: #2AABD2;
+		border-radius: 5px 5px 5px;
+	}
+	#baocun{
+		margin-top: 10px;
+		height: 30px;
+		width: 60px;
+		line-height: 30px;
+		background-color: #2AABD2;
+		border-radius: 5px 5px 5px;
+	}
+		.center_div{
+			width: 50px;
+			height: 20px;
+			border: 1px solid #265A88;
+			float: left;
+			margin-left: 20px;
+			font-size: 15px;
+			line-height: 20px;
+			text-align: center;
+			margin-top: 30px;
+		}
+		#tiaozhuan_number{
+			width: 40px;
+			height: 15px;
+			margin-top: 30px;
+			margin-left:20px;
+			float: left;
+			line-height: 15px;
+			text-align: center;
+			font-size: 9px;
+		}
+ #pageStyle{  
+         display:inline-block;  
+         width:35px;  
+         height:25px;  
+         border:1px solid #CCC; 
+         border-radius: 5px 5px 5px; 
+         line-height:25px;  
+         text-align:center;  
+         color:#999;  
+         margin-top:10px;  
+         margin-left: 30px;
+         text-decoration:none; 
+         }  
+      #pageStyle:hover{  
+          background-color:#CCC;  
+          }  
+      #pageStyle .active{  
+          background-color:#0CF;  
+          color:#ffffff;  
+          }       
