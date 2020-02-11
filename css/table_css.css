@@ -2,6 +2,10 @@
 			ul ,li{
 				list-style-type: none;
 			}
+			#right{
+				overflow: scroll;
+				float: left;
+			}
 			#menu{
 				width: 100px;
 				float: left;
@@ -57,6 +61,8 @@
 			#tab .tab-nav li.active a{
 				color: #777;
 			}
+			
+			
 			.content-iten{
 				display: none;
 			}
@@ -137,6 +143,32 @@
          margin-left: 30px;
          text-decoration:none; 
          }  
+         .prev{
+         	 width:65px;  
+         height:40px;  
+         border:1px solid #CCC; 
+         border-radius: 5px 5px 5px; 
+         line-height:40px;  
+         text-align:center;  
+         color:#999;  
+         margin-top:10px;  
+         margin-left: 30px;
+         bottom:  10px;
+         float: left;
+         }
+         .next{
+         	 width:65px;  
+         height:40px;  
+         border:1px solid #CCC; 
+         border-radius: 5px 5px 5px; 
+         line-height:40px;  
+         text-align:center;  
+         color:#999;  
+         margin-top:10px;  
+         margin-left: 30px;
+         bottom:  10px;
+         float: left;
+         }
       #pageStyle:hover{  
           background-color:#CCC;  
           }  
@@ -144,3 +176,4 @@
           background-color:#0CF;  
           color:#ffffff;  
           }       
+      

@@ -1,3 +1,7 @@
+ 	
+ 	var l =document.querySelector('#left');
+ 	var r =document.querySelector('#right');
+ 	 
  	//导航栏
 			$(document).ready(function(){//等待dom元素加载完毕
 				$(".has_children").click(function(){
@@ -7,7 +11,6 @@
 					.children("a").hide();//将兄弟元素下的a元素隐藏
 				});
 			});
-
  	//Tab切换
  	
  	$("li").eq(0).css("color","blue");
@@ -352,6 +355,388 @@
                 read:"2020", 
                 condition:"",
                 nianji:""
+                },
+                { num: "36", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+               { num: "37", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },{ num: "38", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                { num: "39", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },{ num: "40", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                { num: "41",
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                { num: "42", 
+                time: "2020-01-29" , 
+                title: "bbb" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+               { num: "43", 
+                time: "2020-01-18" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                { num: "44", 
+                time:  "2020-01-28" ,
+                title: "bbbbbbb" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                 { num: "45", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                { num: "46", 
+                time: "2020-01-29" , 
+                title: "accccc" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+               { num: "47", 
+                time: "2020-01-18" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                { num: "48", 
+                time:  "2020-01-28" ,
+                title: "vvvvv" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                 { num: "49", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                 { num: "50", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                { num: "51", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+               { num: "52", 
+                time: "2020-01-18" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                { num: "53", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                 { num: "54", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                 { num: "55", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                { num: "56", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+               { num: "57", 
+                time: "2020-01-18" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                { num: "58", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                 { num: "59", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                 { num: "60", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                 { num: "61", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                { num: "61", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+               { num: "62", 
+                time: "2020-01-18" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                { num: "63", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                }, { num: "64", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                 { num: "65", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                 { num: "66", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                { num: "67", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+               { num: "68", 
+                time: "2020-01-18" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                { num: "69", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                 { num: "70", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                 { num: "71", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                 { num: "72", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+                { num: "73", 
+                time: "2020-01-29" , 
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               },
+               { num: "74", 
+                time: "2020-01-18" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                },
+                { num: "75", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+                }, { num: "76", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
+               }, { num: "77", 
+                time:  "2020-01-28" ,
+                title: "aaaaaa" , 
+                writer:"bbb" , 
+                important:"1" , 
+                read:"2020", 
+                condition:"",
+                nianji:""
                 }
            ];
             //动态创建表格的方式，使用拼接html的方式 （推荐）
@@ -378,11 +763,12 @@
            creatTable(data);
             // console.log( $("button").children("td"));
             //点击发布按钮触发状态的改变
+           
 		　　  $('button.cz2').click(function(){
 				  	$($(this)).css({"background-color":"yellow"});
 				  	  $($(this)).text('发布');
 				  	  alert("发布成功!")
-				  	  $('button.zhaungtai').trigger('click');
+				  	  $('button.zhaungtai').trigger('click');			  	
 				  	  	$('button.zhaungtai').text('draft');
 				  	  	//找不到他相对的class，导致改变一个所有的状态都发生变化改变
 				  	   });
@@ -392,6 +778,7 @@
 		  $('button.cz3').click(function(){
 		  //	 $("p").css({"background-color":"yellow"});
 		   $(this).parents('tr').remove();
+		   alert("删除成功!");
 		  });
           
           //添加操作
@@ -495,7 +882,10 @@
 	var sumRows = $table.find('tbody tr').length;
 	var sumPages = Math.ceil(sumRows / pageSize); //总页数  
 
-	var $pager = $('<div class="page"></div>'); //新建div，放入a标签,显示底部分页码  
+	var $pager = $('<div class="page"></div>'); //新建div，放入a标签,显示底部分页码 
+	$pager.append("<button class='prev'>首页</button>");
+
+	 
 	for(var pageIndex = 0; pageIndex < sumPages; pageIndex++) {
 		$('<a href="#" id="pageStyle" onclick="changCss(this)"><span>' + (pageIndex + 1) + '</span></a>').bind("click", {
 			"newPage": pageIndex
@@ -505,7 +895,16 @@
 			//触发分页函数  
 		}).appendTo($pager);
 		$pager.append(" ");
-	}
+		}
+	$pager.append("<button class='next'>下一页</button>");
+	
+	$('.next').click(function(){
+		var ar = document.getElementsByTagName("a");
+		for(var i=0;i<sumPages;i++){
+			
+					ar[i+1]=a[i];
+		}
+	})
 	$pager.insertAfter($table);
 	$table.trigger("paging");
 	//默认第一页的a标签效果  
