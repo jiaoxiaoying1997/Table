@@ -20,6 +20,16 @@
 				padding-top: 15px;
 				text-align: center;
 			}
+			table,table tr td {
+    border: 1px solid #ADADAD;
+    text-align: center;
+
+    border-collapse: collapse;
+}
+ table tr td {
+    padding: 2.5px 1px;
+
+}
 			.highlight{
 				color: #FFFFFF;
 				background: green;

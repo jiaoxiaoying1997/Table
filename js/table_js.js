@@ -1,7 +1,6 @@
  	
- 	var l =document.querySelector('#left');
- 	var r =document.querySelector('#right');
- 	 
+// 	var l =document.querySelector('#left');
+// 	var r =document.querySelector('#right'); 	 
  	//导航栏
 			$(document).ready(function(){//等待dom元素加载完毕
 				$(".has_children").click(function(){
@@ -31,6 +30,7 @@
     })
   }); 
 //添加表格的列
+			
 			
 			var data =  [
 			 { num: "1", 
@@ -746,7 +746,8 @@
            var tableData = ""
          //  console.log(data.length);
             	for(var i=0;i<data.length;i++){
-            	 tableData +="<tr style='width:2000px'>"	
+            		
+            	 tableData +="<tr style='width:2000px' class = 'hh'>"	
             	tableData += "<td style='width:100px;'>" + data[i].num + "</td>"
 	  	 	tableData += "<td style='width:170px;'>" + data[i].time + "</td>"
 	   		tableData += "<td style='width:330px;'>" + data[i].title + "</td>"
@@ -756,33 +757,36 @@
 	   		tableData += "<td style='width:70;'>" + "<button class='zhaungtai' style = 'background-color: #888888;'>published</button>" + "</td>"
 	   		tableData += "<td style='width:280;'>" +
 	   		"<button class='cz1' style='height: 25px;width: 50px; margin-right:15px;background-color: blue;'>编辑</button> <button class='cz2' style='height: 25px;width: 50px; margin-right:15px;background-color: #FFFFFF;'>草稿</button>  <button class='cz3' style='height: 25px;width: 50px; margin-right:15px;background-color: red'>删除</button>"+ "</td>"
-	   		 	tableData += "</tr>"
+	   		 	tableData += "</tr>"	 
+	   		 	
    	        } 	
             	$("#list").html(tableData); 
             }
-           creatTable(data);
-            // console.log( $("button").children("td"));
+            creatTable(data);
+            var Arr = [];
+           for(var i=0;i<data.length;i++)
+           {
+           	Arr[i] = data[i].num;
+           }
+           console.log(Arr.length);
             //点击发布按钮触发状态的改变
            
-		　　  $('button.cz2').click(function(){
+		　　  $('button.cz2').on("click",function(){
 				  	$($(this)).css({"background-color":"yellow"});
 				  	  $($(this)).text('发布');
 				  	  alert("发布成功!")
 				  	  $('button.zhaungtai').trigger('click');			  	
 				  	  	$('button.zhaungtai').text('draft');
 				  	  	//找不到他相对的class，导致改变一个所有的状态都发生变化改变
-				  	   });
-
-          
+				  	  });
              //删除操作
-		  $('button.cz3').click(function(){
+		  $('button.cz3').on("click",function(){
 		  //	 $("p").css({"background-color":"yellow"});
 		   $(this).parents('tr').remove();
-		   alert("删除成功!");
 		  });
           
           //添加操作
-          $('#btnAdd') .click(function(){
+          $('#btnAdd') .on("click",function(){
            	var maskWidth = $(document).width();
            	var maskHeight = $(document).height();
            	//遮罩层初始化
@@ -800,42 +804,43 @@
           
            	$('#add').show();
            	//关闭操作
-           	$('#close').click(function(){
+           	$('#close').on("click",function(){
            		$(this).parent().hide();
            		$('.mask1').remove();
            	});
            	
-           	//保存添加操作
-           		
-           	$('#baocun').click(function(){
+           	//保存添加操作		
+           	$('#baocun').on("click",function(){
            		 	//将内容显示在弹出层中
-           		 	var bao = [];
-           		 	//保存数据的文件
-           	$(this).parent().siblings().each(function(){
-           		//$('input').val();
-           		data.push($(this).text())
-           		//console.log($(this).text());
-           		//alert(2);
-           	});
-        //   	var i =0;
-           	$('.me1').children().each(function(){
-           		$(this).children('input').val() ;
-           		console.log($(this).children('input').val());
-           		
-           	});
-           	});
-           	
-           	
-           	
-           });
-            
-          
-          
-          
-          
+           		 var data1 = [];	
+           		function Total() {
+           			var txt = $('.me1').find(':text');
+           			for(var i=0;i<txt.length;i++){
+           				data1.push(txt.eq(i).val());
+           			}
+           		}
+           		 Total();
+           		creatTable1(data1); 
+           		});     	
+          });	
+    //添加一个新的内容表格
+    function creatTable1(data1) {
+
+		var $trTemp = $("<tr style='width:2000px'></tr>");
+		//往行里面追加 td单元格
+		$trTemp.append("<td style='width:100px;'>" + data1[0] + "</td>");
+		$trTemp.append("<td style='width:170px;'>" + data1[1] + "</td>");
+		$trTemp.append("<td style='width:330px;'>" + data1[2] + "</td>");
+		$trTemp.append("<td style='width:100px;'>" + data1[3] + "</td>");
+		$trTemp.append("<td style='width:100px;'>" + data1[4] + "</td>");
+		$trTemp.append("<td style='width:70px;'>" + data1[5] + "</td>");
+		$trTemp.append("<td style='width:70px;'>" + "<button class='zhaungtai' style = 'background-color: #888888;'>published</button>" + "</td>");
+		$trTemp.append("<td style='width:280px;'>" + "<button class='cz1' style='height: 25px;width: 50px; margin-right:15px;background-color: blue;'>编辑</button>  <button class='cz2' style='height: 25px;width: 50px; margin-right:15px;background-color: #FFFFFF;'>发布</button>  <button class='cz3' style='height: 25px;width: 50px; margin-right:15px;background-color: red'>删除</button>" + "</td>");
+		$trTemp.appendTo("#list");
+	}
          //编辑操作
          
-           $('button.cz1') .click(function(){
+           $('button.cz1') .on("click",function(){
            	var maskWidth = $(document).width();
            	var maskHeight = $(document).height();
            	//遮罩层初始化
@@ -850,42 +855,34 @@
            		'height':maskHeight,
            		'z-index':-1
            	});
-           	var dataBianji = [];//保存数据的文件
-           	$(this).parent().siblings().each(function(){
-           		data.push($(this).text())
-           	});
-           	//将内容显示在弹出层中
-           	var i =0;
-           	$('#add').children().each(function(i){
-           		$(this).children('span').text(dataBianji[i]);
-           	});
-            	$('#add').show();
+           	 	$('#add').show();
            	//关闭操作
-           	$('#close').click(function(){
+           	$('#close').on("click",function(){
            		$(this).parent().hide();
            		$('.mask').remove();
            	});
 
-           });
+           //保存操作	
+          	$('#baocun').on("click",function(){
+          		
+          		console.log($(this).parents('tr').b);
+           	  });
            
-           
-          
+           });   
            //分页部分      
-        
- $(function() {
+       
+ $(function seach() {
 	var $table = $('table');
 	var currentPage = 0; //当前页默认值为0  
 	var pageSize = 16; //每一页显示的数目  
 	$table.bind('paging', function() {
 		$table.find('tbody tr').hide().slice(currentPage * pageSize, (currentPage + 1) * pageSize).show();
 	});
-	var sumRows = $table.find('tbody tr').length;
+	var sumRows = $table.find('tbody tr').length;//表格总行数的获取
 	var sumPages = Math.ceil(sumRows / pageSize); //总页数  
 
 	var $pager = $('<div class="page"></div>'); //新建div，放入a标签,显示底部分页码 
-	$pager.append("<button class='prev'>首页</button>");
-
-	 
+	/*$pager.append("<button class='prev' onclick='shouye()'>首页</button>");*/
 	for(var pageIndex = 0; pageIndex < sumPages; pageIndex++) {
 		$('<a href="#" id="pageStyle" onclick="changCss(this)"><span>' + (pageIndex + 1) + '</span></a>').bind("click", {
 			"newPage": pageIndex
@@ -896,15 +893,15 @@
 		}).appendTo($pager);
 		$pager.append(" ");
 		}
-	$pager.append("<button class='next'>下一页</button>");
-	
-	$('.next').click(function(){
-		var ar = document.getElementsByTagName("a");
-		for(var i=0;i<sumPages;i++){
-			
-					ar[i+1]=a[i];
-		}
-	})
+	/*$pager.append("<button class='next'>下一页</button>");*/
+//	
+//	$('.next').click(function(){
+//		var ar = document.getElementsByTagName("a");
+//		for(var i=0;i<sumPages;i++){
+//			
+//					ar[i+1]=a[i];
+//		}
+//	})
 	$pager.insertAfter($table);
 	$table.trigger("paging");
 	//默认第一页的a标签效果  
@@ -912,7 +909,12 @@
 	$pagess[0].style.backgroundColor = "#006B00";
 	$pagess[0].style.color = "#ffffff";
 });
-
+//function shouye(obj){
+//	
+//	var arr = document.getElementsByTagName("a");
+//	arr[3] = pageIndex
+//	console.log(arr[3]);
+//}
 //a链接点击变色，再点其他回复原色  
 function changCss(obj) {
 	var arr = document.getElementsByTagName("a");
@@ -932,6 +934,8 @@ function changCss(obj) {
         var $sea=$('#imp').val();
         //先隐藏全部，再把符合筛选条件的值显示
         $('table tbody tr').hide().filter(':contains('+$sea+')').show();
+        
+        
     });
 
          
