@@ -766,9 +766,9 @@
             var Arr = [];
            for(var i=0;i<data.length;i++)
            {
-           	Arr[i] = data[i].num;
+           	Arr[i] = data[i];
            }
-           console.log(Arr.length);
+           console.log(Arr[2]);
             //点击发布按钮触发状态的改变
            
 		　　  $('button.cz2').on("click",function(){
@@ -861,11 +861,48 @@
            		$(this).parent().hide();
            		$('.mask').remove();
            	});
-
+			//将表格中的内容反馈到input中
+			
+			
            //保存操作	
           	$('#baocun').on("click",function(){
-          		
-          		console.log($(this).parents('tr').b);
+          		//var thistext = $(this).text();
+          		//$(".me1 input").val(thistext);
+          	//	console.log(thistext);
+          	//获取你点击的行数
+          	var number = 0;
+          	 const es = document.getElementsByTagName('tr');
+			    for (const key in es) {
+			        es[key].onclick = function() {
+			            let number = parseInt(key) - 1;
+			            //console.log(Arr[number].num);
+			            var inputArr = document.getElementsByClassName("list");
+			             console.log(inputArr.length);
+			            Arr[number].num  = inputArr[0];
+			            Arr[number].time = inputArr[1] ;
+			            Arr[number].title = inputArr[2];
+			            Arr[number]. writer = inputArr[3];
+			            Arr[number].important = inputArr[4];
+			             Arr[number].read = inputArr[5];
+			             
+			             
+			             
+			           // for(var i=0;i<inputArr.length;i++)
+			              //   inputArr[i]=Arr[number]
+			            		
+			          //  }
+			            
+			            
+			          //  Arr[number].num =  $(".me1 input").val();
+			           // var thistext = $(Arr[number]);
+          		    //   $(".me1 input").val(thistext);
+			           // alert('你点击的是第' + number + '行表格');
+			        }
+			    //获取到这一行的数据
+			    
+			    
+    }      
+ 
            	  });
            
            });   
